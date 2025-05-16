@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Edmondsans";
+  src: url("/fonts/edmondsans-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Edmondsans";
+  src: url("/fonts/edmondsans-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Edmondsans";
+  src: url("/fonts/edmondsans-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("/fonts/montreal-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("/fonts/montreal-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 173 80% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 173 80% 40%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 173 80% 40%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 173 80% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-geist-sans), "Didact Gothic", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-geist-sans), sans-serif;
+    font-weight: 500;
+  }
+}
+
+/* Utility-Klassen für die Schriftarten */
+@layer utilities {
+  .font-edmondsans {
+    font-family: "Edmondsans", sans-serif;
+  }
+
+  .font-edmondsans-medium {
+    font-family: "Edmondsans", sans-serif;
+    font-weight: 500;
+  }
+
+  .font-edmondsans-bold {
+    font-family: "Edmondsans", sans-serif;
+    font-weight: bold;
+  }
+
+  .font-didact {
+    font-family: "Didact Gothic", sans-serif;
+  }
+
+  .font-inter-tight {
+    font-family: "Inter Tight", sans-serif;
+  }
+
+  .font-inter-tight-medium {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+  }
+
+  .font-inter-tight-semibold {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+  }
+
+  .font-inter-tight-bold {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 700;
+  }
+
+  .font-geist {
+    font-family: var(--font-geist-sans), sans-serif;
+  }
+
+  .font-geist-medium {
+    font-family: var(--font-geist-sans), sans-serif;
+    font-weight: 500;
+  }
+
+  .font-geist-bold {
+    font-family: var(--font-geist-sans), sans-serif;
+    font-weight: 700;
+  }
+
+  .font-geist-mono {
+    font-family: var(--font-geist-mono), monospace;
+  }
+
+  .font-geist-mono-extralight {
+    font-family: var(--font-geist-mono), monospace;
+    font-weight: 200;
+  }
+
+  .font-montreal {
+    font-family: "Montreal", "Arial", sans-serif;
+    font-weight: 400;
+  }
+
+  .font-montreal-bold {
+    font-family: "Montreal", "Arial", sans-serif;
+    font-weight: 700;
+  }
+
+  /* Spezifische Klasse für die Navigation */
+  .nav-text {
+    font-family: var(--font-geist-sans), sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 10px;
+  }
+}
